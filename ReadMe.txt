@@ -1,16 +1,30 @@
-------------
-Introduction
-------------
-This repository contains the material submitted for Module 3 of the Python course. The project demonstrates the application of Python and the SUND (Simulation and UNcertainty in Dynamical systems) toolbox to a larger systems biology modelling problem.
+A Mathematical Model Connecting Appetite-Driven Food Intake to Metabolic Changes across Diet and GLP-1RA Treatments in Mice
 
-The original project focused on developing, calibrating, validating, and simulating a mechanistic mouse model of metabolic regulation and pharmacology. To comply with copyright agreements and confidentiality requirements, portions of the original repository have been removed or simplified. This includes selected datasets, manuscript material, figures, and other project-specific resources that cannot be redistributed.
+Oscar Silfvergren1,2, Christian Simonsson3, Monika Sundqvist3, Pär Nordell3, Peter Gennemark1,3, Gunnar Cedersund1,2,4,5,*
 
-The remaining material is intended to demonstrate the overall project structure, modelling workflow, and Python programming techniques developed during the course.
+1. Department of Biomedical Engineering, Linköping University, Linköping, Sweden.  
+2. SUND sound medical decisions, Linköping, Sweden. 
+3. Drug Metabolism and Pharmacokinetics, Research and Early Development, Cardiovascular, Renal and Metabolism (CVRM), BioPharmaceuticals R&D, AstraZeneca, Gothenburg, Sweden.
+4. Centre for Medical Image Science and Visualisation (CMIV), Linköping University, Linköping, Sweden.
+5. School of Medical Sciences and Inflammatory Response and Infection Susceptibility Centre (iRiSC), Faculty of Medicine and Health, Örebro University, Örebro, Sweden.
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+This repository contains the code used to develop, calibrate, validate, and simulate a mechanistic mouse model describing:
+
+- Appetite regulation
+- Food intake and meal patterns
+- Body-weight dynamics
+- Glucose-insulin regulation
+- Exenatide pharmacology
+- Semaglutide pharmacology
+
+The model was implemented using the SUND (Simulation and UNcertainty in Dynamical systems) toolbox.
 
 -----------------
 Required software
 -----------------
-
 The following software packages are required:
 
 - Python
@@ -23,12 +37,11 @@ The following software packages are required:
 - pyswarm
 - pyswarms
 
-Additional packages may be required depending on the specific functionality being tested.
+The model files (*.txt), parameter files (*.csv), and experimental datasets (*.xlsx) must remain in their provided locations within the repository.
 
 -----------------
-Running the project
+Running the model
 -----------------
-
 The main entry point is:
 
     Main.py
@@ -37,49 +50,64 @@ Run the script from your preferred Python environment:
 
     python Main.py
 
-All analyses should be started through Main.py. The main script loads the required data, models, parameter files, and functions in the correct order and serves as the central entry point for the project.
+When launched, a graphical user interface (GUI) will appear.
 
-Individual functions and scripts are generally not intended to be executed directly.
+The GUI allows you to select which manuscript figure to generate and whether to create:
+- Rapid plot
+- More complete plot
+
+Available figures include:
+- Guo & Hall 2011
+- Mack et al. 2006 (short-term)
+- Mack et al. 2006 (long-term)
+- He et al. 2020
+- Semaglutide studies
+- Gabery et al. 2020
+- Digital mouse population simulations
+- Supplementary figures
+
+After selecting a figure and plot mode, click "Plot" to generate the selected simulation and figure.
 
 -----------------
-Project content
------------------
+Parameter estimation
+--------------------
+Parameter estimation routines are implemented in:
 
-The project demonstrates a complete modelling workflow, including:
+    optimise.py
 
-- Loading and preprocessing experimental data
-- Building mathematical models using the SUND toolbox
-- Running model simulations
-- Parameter estimation and optimisation
-- Uncertainty analysis
-- Model validation
-- Generation of figures and simulation outputs
+Most optimisation calls are disabled by default in Main.py to avoid unintentionally launching computationally expensive optimisation procedures.
 
-The supplied version is a reduced course submission and therefore does not necessarily reproduce all analyses or figures from the original research project.
+To perform optimisation, uncomment the relevant optimisation function call in Main.py and run the script.
 
 -----------------
 Repository structure
 --------------------
-
 Main.py
-    Main entry point used to run the project.
+    Entry point and plotting GUI.
 
-Functions/
-    Collection of utility functions used for simulations, optimisation, plotting, data handling, and model evaluation.
+Functions/functions.py
+    Data loading and utility functions.
+
+Functions/simulate.py
+    Simulation routines.
+
+Functions/cost.py
+    Cost-function calculations.
+
+Functions/optimise.py
+    Parameter estimation and profile-likelihood routines.
+
+Functions/plots.py
+    Plotting functions used to generate manuscript figures.
 
 Models/
     Model definitions used by the SUND toolbox.
 
 Parameters/
-    Example parameter sets and optimisation results.
+    Optimised parameter sets and profile-likelihood results.
 
-Data/
-    Example datasets included for educational purposes.
+MiceBW_data.xlsx
+    Experimental data used for model calibration and validation.
 
------------------
-Notes
------------------
 
-This project was submitted as part of Module 3 of the Python course and is intended to demonstrate the practical application of Python programming to a scientific modelling problem.
-
-Some original project files, datasets, figures, and supporting material have been removed due to copyright restrictions, publication requirements, or confidentiality considerations. The remaining files are sufficient to illustrate the project structure, workflow, and programming concepts developed during the course.
+Most users only need to run Main.py and use the graphical interface to reproduce the figures presented in the manuscript.
