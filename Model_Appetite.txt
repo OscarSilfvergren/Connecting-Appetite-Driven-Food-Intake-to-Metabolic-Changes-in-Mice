@@ -1,0 +1,95 @@
+########## NAME
+Model_Appetite
+
+########## METADATA
+time_unit = d
+authors = "Silfvergren" # optional
+########## MACROS
+
+########## STATES
+
+d/dt(Hours)          = 24                                                                           # h/day
+d/dt(Meal_fats1)     = FatRatio*EI     - K_Fats*Meal_fats1                                          # kcal/day
+d/dt(Meal_fats2)     =                   K_Fats*Meal_fats1       - K_Fats*Meal_fats2                # kcal/day
+d/dt(Meal_nonfats1)  = (1-FatRatio)*EI - K_Nonfat*Meal_nonfats1                                     # kcal/day
+d/dt(Meal_nonfats2)  =                   K_Nonfat*Meal_nonfats1  - K_Nonfat*Meal_nonfats2           # kcal/day
+d/dt(EI_AC)          = EI                                                                           # kcal/day
+d/dt(EI_delay)  = EI_HungerRate_delay*(EI-EI_delay)                                                 # kcal/day 
+d/dt(Appetite)  = DayNightCycle*EI_appetite*E_Appetite_PD - ((StomachFullness*Appetite)^AppetiteStabiliser) # dimensionless
+
+
+EI_delay(0)      = 12      # kcal   
+Hours(0)         = 0       # h                                                                                                                                                    
+Meal_fats1(0)    = 0       # kcal
+Meal_nonfats1(0) = 0       # kcal            
+Meal_fats2(0)    = 0       # kcal
+Meal_nonfats2(0) = 0       # kcal
+EI_AC(0)         = 0       # kcal  
+Appetite(0)      = 1       # dimensionless   
+
+########## PARAMETERS
+StomachFullnessCarbs = 46.92933601484056    # 1/kcal
+StomachFullnessFats  = 2.765517473085028    # 1/kcal
+
+Time_CircadianRhythm  = 8.193436518431106       # 1/day
+Time_BaselineShift    = 0.2623661064021575      # 1/(day*week)
+EI_HungerRate         = 0.4429299957111463      # day/kcal
+EI_HungerRate_delay   = 0.03037188520008936     # 1/day
+AppetiteStabiliser    = 1.6167542445703527      # dimensionless
+
+MealIntakeRate        = 15.063307224728755      # g/day;
+
+ExenatideIMax         = 0.7                  # fold-decrease
+ExenatideIC50         = 0.5                  # nmol/L
+
+
+########## VARIABLES
+
+K_Nonfat   = 60                           # 1/day about 20 for humans (PMID: 6344757 & 30740834) and 60 for mice (liquid: PMID 12027874; PMID: 15305997 & 29575442)
+K_Fats     = 20                           # 1/day for mice (PMID: 15305997)
+Eating     = AllowedToEat*(Appetite > 1)           # boolean
+MealIntake = MealIntakeRate * Eating               # g/day
+
+FatRatio_g    = (FatRatio/9)/((FatRatio/9)+((1-FatRatio)/4))       # FatRatio is kcal%, and FatRatio_g is g%
+NonFatRatio_g = ((1-FatRatio)/4)/((FatRatio/9)+((1-FatRatio)/4))   # (1-FatRatio) is kcal%, and NonFatRatio_g is g%
+EnergyDensity = 9*FatRatio_g + 4*NonFatRatio_g                     # kcal/g
+
+EI = EnergyDensity*MealIntake    # kcal/day energy intake (Atwater factor)
+
+StomachFullness  = StomachFullnessFats*Meal_fats2 + StomachFullnessCarbs*Meal_nonfats2                               # Fullness
+E_Appetite_PD    = 1 - (ExenatideIMax*C1^ExenatideIHill/(ExenatideIC50^ExenatideIHill+C1^ExenatideIHill))            # GLP-1RA effect
+DayNightCycle    = (Time_BaselineShift*Weeks + Time_CircadianRhythm)*(1 + sin(2 * (Hours + 4)*3.141592653589793/24)) # Time effect
+EI_appetite      = exp(-EI_HungerRate * (EI_delay-15))                                                               # Fed-state effect
+
+CarbFractionOfNonFat = CarbRatio/(1-FatRatio)
+OGTT = CarbFractionOfNonFat * (K_Nonfat*Meal_nonfats2/4) * 1000/(180.16*24)                                  #(mMol/h)
+
+########## FUNCTIONS
+
+########## EVENTS
+
+########## OUTPUTS
+
+EI = EI
+OGTT = OGTT
+########## INPUTS
+
+C1 = C1 @ 0
+
+Weeks = Weeks @ 0
+
+FatRatio = FatRatio @0.5
+CarbRatio = CarbRatio @0.3
+AllowedToEat = AllowedToEat @1
+ExenatideIHill = ExenatideIHill @2
+
+########## FEATURES
+EI_AC         = EI_AC [kcal]
+EI            = EI [kcal/day]
+EI_delay      = EI_delay [kcal/day]
+Eating        = Eating [boolean]
+
+E_Appetite_PD = E_Appetite_PD [fold-decrease]
+DayNightCycle = DayNightCycle [dimensionless]
+EI_appetite   = EI_appetite [dimensionless]
+Appetite      = Appetite [dimensionless]

@@ -1,0 +1,94 @@
+########## NAME
+Model_BW
+
+########## METADATA
+time_unit = d
+authors = "Gennemark and Simonsson"
+########## MACROS
+
+########## STATES
+
+d/dt(FFM)          = aa*(EI-EE)                    # g/day                                                             
+d/dt(FM)           = bb*(EI-EE)                    # g/day              
+
+d/dt(lambda_delay) = lambda_delayK*(lambda-lambda_delay)
+d/dt(EI_AC_BWmodel)= EI
+
+FFM(0)              = 20.4700      # g                                                                             
+FM(0)               = 2.5300       # g   
+
+lambda_delay(0)     = lambda       # kcal/g/day              
+EI_AC_BWmodel(0)    = 0            # g                                                                                                                                                                                                                                                                                                                                                                                              
+
+########## PARAMETERS
+lambda_delayK   = 0.3
+
+cEI             = 10                # (kcal/day) Standard diet     
+gamma_FM        = 0.03 # (kcal/g/day) same
+gamma_FFM       = 0.15  # (kcal/g/day) same
+pi_FM           = 0.18                 # (kcal/g)
+pi_FFM          = 0.23  # (kcal/g)
+beta            = 0.4    # (kcal/g)
+K               = 1.4                  # (kcal/day)                                                                                                                                                 
+
+rho_FM          = 9.4 # (kcal/g) fat mass
+rho_FFM         = 1.8 # (kcal/g) fat-free mass                                                                                                          
+b_CLGI          = 4.8    # which outputs similar values as Simonsson
+b_EGP           = 70     # which outputs similar values as Simonsson
+b_Ins           = 3.87   # which outputs similar values as Simonsson
+
+########## VARIABLES
+xFM             = FM/FMinit
+xFFM            = FFM/FFMinit
+BW              = FM+FFM                   # (g)
+BW_kg           = BW/1000                  # (kg)
+
+# Male presented in Guo 2009,2011. sex = 1
+# Female presented in Gennemark 2013. sex = 0
+alpha_c         = (sex > 0)  ?   0.1     : 0.13  
+alpha_d         = (sex > 0)  ?   0.00019 : 0.020 
+alpha_k         = (sex > 0)  ?   0.45    : 0.090                                                                             
+alpha           = alpha_c + alpha_d*exp(alpha_k*FM)    
+
+aa              = alpha/(alpha*rho_FFM + rho_FM)         # (g/kcal)                                                                                                                                         
+bb              = 1/(alpha*rho_FFM + rho_FM)             # (g/kcal)                                                                                                                                             
+deltaEI         = EI-cEI                                 # (kcal/day)                                                                                                                                       
+cc              = K + beta*deltaEI + (gamma_FFM + lambda_delay)*FFM + (gamma_FM + lambda_delay)*FM    # (kcal/day)                                                                                                       
+EE              = (cc + pi_FM*bb*EI + pi_FFM*aa*EI)/(1 + pi_FM*bb + pi_FFM*aa)                        # (kcal/day)
+
+f_IR_Uid        = log(1+b_CLGI^3*xFM)/log(1+b_CLGI^3)  # (fold-change increase, which is xFM=1)
+f_IR_EGP        = log(1+b_EGP^3*xFM)/log(1+b_EGP^3)    # (fold-change increase, which is xFM=1)
+f_IR_Ins        = log(1+b_Ins^3*xFM)/log(1+b_Ins^3)    # (fold-change increase, which is xFM=1)
+
+########## FUNCTIONS
+
+########## EVENTS
+
+########## OUTPUTS
+BW_kg = BW_kg
+
+f_IR_Uid = f_IR_Uid
+f_IR_EGP = f_IR_EGP
+f_IR_Ins = f_IR_Ins
+
+BW = BW
+xFM = xFM
+xFFM = xFFM
+
+########## INPUTS
+EI              = EI @10 
+
+sex             = sex @ 1
+
+lambda          = lambda @ 0.25
+FMinit          = FMinit @ 2.5300
+FFMinit         = FFMinit @ 20.4700
+
+########## FEATURES
+Body_weight     = BW [g]
+FM              = FM [g]
+EE              = EE [kcal/day]
+EI              = EI [kcal/day]
+EI_AC_BWmodel   = EI_AC_BWmodel [kcal]
+lambda_delay    = lambda_delay [kcal/g/day]
+lambda          = lambda [kcal/g/day]

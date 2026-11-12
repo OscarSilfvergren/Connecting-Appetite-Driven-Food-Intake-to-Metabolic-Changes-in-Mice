@@ -1,0 +1,101 @@
+########## NAME
+
+Model_GI
+
+########## METADATA
+time_unit = d
+authors = "Silfvergren and Simonsson"
+
+########## MACROS
+
+########## STATES
+                                                                                                                                   
+d/dt(G_SC)            =(  -G_SC*k_ip                                                         )*dth    # mMol/day  
+d/dt(G_Central)       =(  +G_SC*k_ip   + OGTT + QVP*G_Peripheral - QVG*G_Central - U  + EGP  )*dth    # mMol/day
+d/dt(G_Peripheral)    =(                      - QVP*G_Peripheral + QVG*G_Central             )*dth    # mMol/day           
+
+d/dt(I_Central)       =( IP  - CL_I*I_Central/VI                 )*dth    # pMol/day
+
+d/dt(U_Idep_delay)    =( k_IE * ((I_Central/VI) - U_Idep_delay)  )*dth    # pMol/L/day                                                                                                     
+d/dt(EGP_Gdep_delay)  =( k_GE2* ((G_Central/VG) - EGP_Gdep_delay))*dth    # mMol/L/day                                                                                                                                     
+                                                                                                                                                                                                                                                                                                                                                                                                                           
+G_SC(0)             = 0            # mMol                                                                                                                                                    
+G_Central(0)        = 0.0179       # mMol                                                                                                                     
+G_Peripheral(0)     = 0.0165       # mMol
+I_Central(0)        = 0.13766      # pMol
+U_Idep_delay(0)     = 68.8         # pMol/L
+EGP_Gdep_delay(0)   = 5.85         # mMol/L
+
+########## PARAMETERS   
+   
+Q               = 0.019850284776051944
+k_IE            = 0.16936552097576144
+k_GE2           = 23.24025
+
+CL_G            = 0.027600000000000003
+k_ip            = 1.6390969885243754
+GPRG            = 1.9999941763824074
+
+U_50            = 19.999999999999996
+U_max_id        = 0.0067682144
+U_max0          = 0.77442724747343
+
+G_SS            = 4.62140241064
+I_SS            = 63.6806369813
+I_Gdep          = 5.70289485853
+I_G0            = 11.832380245019129
+CL_I            = 0.21731237226680863
+
+ExenatideInsulinMax        = 8.684955251825349
+ExenatideInsulin50         = 1.3517570585786958
+ExenatideInsulin_hill      = 4.0
+ExenatideInsulinDecayMax   = 7.252960295778659
+ExenatideInsulinDecay50    = 7.596467594130337
+
+########## VARIABLES
+Exenatide_hill     = C1^ExenatideInsulin_hill
+Exenatide_PD       = 1 + ((ExenatideInsulinMax*Exenatide_hill/((ExenatideInsulin50^ExenatideInsulin_hill)+Exenatide_hill)) - (Exenatide_hill*ExenatideInsulinDecayMax/(Exenatide_hill+(ExenatideInsulinDecay50^ExenatideInsulin_hill))))
+
+dth = 24       # h in a day
+VG  = 0.003065 # L                                                                                                                                    
+VP  = 0.002812 # L                                                                                                                                                                                                                                                                                                                                  
+VI  = 0.002001 # L                                                                                                                                               
+QVP = Q/VP                 # (1/h)
+QVG = Q/VG                 # (1/h)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+IP  = (I_SS + I_Gdep*Exenatide_PD*max(0,(G_Central/VG) - I_G0*f_IR_EGP ))*f_IR_Ins      # (pMol/L/h) 
+
+U_ii       = CL_G*G_Central/VG         # (mMol/L/h)
+U_max      = U_max0 +(U_max_id*U_Idep_delay/f_IR_Uid)
+U_id_MAH   = (U_max*(G_Central/VG)/(U_50+(G_Central/VG))) 
+U_id_A     =  U_id_MAH*0.1
+U_id_M     =  U_id_MAH*0.4
+U_id_H     =  U_id_MAH*0.5
+U          =  U_ii + U_id_A + U_id_M + U_id_H          # (mMol/L/h)
+
+G_EG          = G_SS*f_IR_EGP/((EGP_Gdep_delay/(G_SS*f_IR_EGP))^GPRG)       
+EGP           = G_EG                          # (mMol/L/h)                                                                         
+
+########## FUNCTIONS
+
+########## EVENTS
+
+########## OUTPUTS
+
+########## INPUTS
+C1    = C1 @ 0
+
+f_IR_Uid = f_IR_Uid @ 1
+f_IR_EGP = f_IR_EGP @ 1
+f_IR_Ins = f_IR_Ins @ 1
+
+OGTT  = OGTT @ 0
+
+########## FEATURES
+Plasma_Glucose  = G_Central/VG [mM]
+Plasma_Insulin  = I_Central/VI [pM]
+EGP             = EGP [mmol/h]
+Exenatide_PD    = Exenatide_PD [fold-increase]
+
+f_IR_Uid = f_IR_Uid [fold-increase]
+f_IR_EGP = f_IR_EGP [fold-increase]
+f_IR_Ins = f_IR_Ins [fold-increase]

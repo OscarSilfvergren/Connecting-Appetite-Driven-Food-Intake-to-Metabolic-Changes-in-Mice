@@ -1,0 +1,1269 @@
+{
+  "chi2_limit": 30.14352720564616,
+  "dgf": 19,
+  "n_locked_parameters": 3,
+  "n_test_values_per_parameter": 20,
+  "total_optimisations": 60,
+  "runs": [
+    {
+      "locked_parameter_index": 2,
+      "locked_parameter_name": "CL_ref",
+      "locked_parameter_value": 1.2742749857031336e-05,
+      "free_parameter_indices": [
+        0,
+        1
+      ],
+      "best_cost": 24.067986699672574,
+      "best_full_parameter_vector": [
+        14011025.814789513,
+        1000000000.0,
+        0.0,
+        0.011012641257065754,
+        0.00832,
+        12742.749857031336,
+        1000000000.0,
+        0.600000500867288,
+        0.997471182625691
+      ]
+    },
+    {
+      "locked_parameter_index": 0,
+      "locked_parameter_name": "Ka",
+      "locked_parameter_value": 0.012742749857031334,
+      "free_parameter_indices": [
+        1,
+        2
+      ],
+      "best_cost": 24.106437623112463,
+      "best_full_parameter_vector": [
+        12742749.857031334,
+        1000000000.0,
+        0.0,
+        0.010702858545391564,
+        0.00832,
+        12599.635334886341,
+        1000000000.0,
+        0.600000500867288,
+        0.997471182625691
+      ]
+    },
+    {
+      "locked_parameter_index": 1,
+      "locked_parameter_name": "V1_ref",
+      "locked_parameter_value": 0.012153189850240676,
+      "free_parameter_indices": [
+        0,
+        2
+      ],
+      "best_cost": 24.597448032201072,
+      "best_full_parameter_vector": [
+        16899561.80495307,
+        1000000000.0,
+        0.0,
+        0.012153189850240676,
+        0.00832,
+        12624.527932602978,
+        1000000000.0,
+        0.600000500867288,
+        0.997471182625691
+      ]
+    },
+    {
+      "locked_parameter_index": 0,
+      "locked_parameter_name": "Ka",
+      "locked_parameter_value": 0.0206913808111479,
+      "free_parameter_indices": [
+        1,
+        2
+      ],
+      "best_cost": 25.356941919609483,
+      "best_full_parameter_vector": [
+        20691380.811147902,
+        1000000000.0,
+        0.0,
+        0.012282897059966063,
+        0.00832,
+        12582.269436823199,
+        1000000000.0,
+        0.600000500867288,
+        0.997471182625691
+      ]
+    },
+    {
+      "locked_parameter_index": 0,
+      "locked_parameter_name": "Ka",
+      "locked_parameter_value": 0.007847599703514611,
+      "free_parameter_indices": [
+        1,
+        2
+      ],
+      "best_cost": 25.413473127170633,
+      "best_full_parameter_vector": [
+        7847599.703514611,
+        1000000000.0,
+        0.0,
+        0.009022337967292656,
+        0.00832,
+        12274.008408500347,
+        1000000000.0,
+        0.600000500867288,
+        0.997471182625691
+      ]
+    },
+    {
+      "locked_parameter_index": 1,
+      "locked_parameter_name": "V1_ref",
+      "locked_parameter_value": 0.007484520228016509,
+      "free_parameter_indices": [
+        0,
+        2
+      ],
+      "best_cost": 26.436411838463172,
+      "best_full_parameter_vector": [
+        5521304.245796273,
+        1000000000.0,
+        0.0,
+        0.007484520228016509,
+        0.00832,
+        11806.111386071902,
+        1000000000.0,
+        0.600000500867288,
+        0.997471182625691
+      ]
+    },
+    {
+      "locked_parameter_index": 0,
+      "locked_parameter_name": "Ka",
+      "locked_parameter_value": 0.004832930238571752,
+      "free_parameter_indices": [
+        1,
+        2
+      ],
+      "best_cost": 26.684011854534166,
+      "best_full_parameter_vector": [
+        4832930.238571752,
+        1000000000.0,
+        0.0,
+        0.0070321054482365124,
+        0.00832,
+        11646.645426587824,
+        1000000000.0,
+        0.600000500867288,
+        0.997471182625691
+      ]
+    },
+    {
+      "locked_parameter_index": 0,
+      "locked_parameter_name": "Ka",
+      "locked_parameter_value": 0.0029763514416313174,
+      "free_parameter_indices": [
+        1,
+        2
+      ],
+      "best_cost": 27.27828288528876,
+      "best_full_parameter_vector": [
+        2976351.441631317,
+        1000000000.0,
+        0.0,
+        0.004880917577085808,
+        0.00832,
+        11166.849074566715,
+        1000000000.0,
+        0.600000500867288,
+        0.997471182625691
+      ]
+    },
+    {
+      "locked_parameter_index": 0,
+      "locked_parameter_name": "Ka",
+      "locked_parameter_value": 0.03359818286283781,
+      "free_parameter_indices": [
+        1,
+        2
+      ],
+      "best_cost": 30.324436719391052,
+      "best_full_parameter_vector": [
+        33598182.862837814,
+        1000000000.0,
+        0.0,
+        0.014067318863925211,
+        0.00832,
+        12404.139356288097,
+        1000000000.0,
+        0.600000500867288,
+        0.997471182625691
+      ]
+    },
+    {
+      "locked_parameter_index": 0,
+      "locked_parameter_name": "Ka",
+      "locked_parameter_value": 0.05455594781168514,
+      "free_parameter_indices": [
+        1,
+        2
+      ],
+      "best_cost": 35.93560746943943,
+      "best_full_parameter_vector": [
+        54555947.811685145,
+        1000000000.0,
+        0.0,
+        0.015730333369221083,
+        0.00832,
+        12216.670099816645,
+        1000000000.0,
+        0.600000500867288,
+        0.997471182625691
+      ]
+    },
+    {
+      "locked_parameter_index": 0,
+      "locked_parameter_name": "Ka",
+      "locked_parameter_value": 0.08858667904100824,
+      "free_parameter_indices": [
+        1,
+        2
+      ],
+      "best_cost": 39.30833840707748,
+      "best_full_parameter_vector": [
+        88586679.04100823,
+        1000000000.0,
+        0.0,
+        0.01671578224982821,
+        0.00832,
+        12058.62994531605,
+        1000000000.0,
+        0.600000500867288,
+        0.997471182625691
+      ]
+    },
+    {
+      "locked_parameter_index": 0,
+      "locked_parameter_name": "Ka",
+      "locked_parameter_value": 0.14384498882876628,
+      "free_parameter_indices": [
+        1,
+        2
+      ],
+      "best_cost": 40.364095804455246,
+      "best_full_parameter_vector": [
+        143844988.8287663,
+        1000000000.0,
+        0.0,
+        0.016995043889267862,
+        0.00832,
+        11997.976211956451,
+        1000000000.0,
+        0.600000500867288,
+        0.997471182625691
+      ]
+    },
+    {
+      "locked_parameter_index": 0,
+      "locked_parameter_name": "Ka",
+      "locked_parameter_value": 0.23357214690901212,
+      "free_parameter_indices": [
+        1,
+        2
+      ],
+      "best_cost": 40.494607597342046,
+      "best_full_parameter_vector": [
+        233572146.9090121,
+        1000000000.0,
+        0.0,
+        0.016999275543475578,
+        0.00832,
+        11955.966927741389,
+        1000000000.0,
+        0.600000500867288,
+        0.997471182625691
+      ]
+    },
+    {
+      "locked_parameter_index": 0,
+      "locked_parameter_name": "Ka",
+      "locked_parameter_value": 0.37926901907322463,
+      "free_parameter_indices": [
+        1,
+        2
+      ],
+      "best_cost": 40.49821896668252,
+      "best_full_parameter_vector": [
+        379269019.0732246,
+        1000000000.0,
+        0.0,
+        0.016988372015012083,
+        0.00832,
+        11950.145314553085,
+        1000000000.0,
+        0.600000500867288,
+        0.997471182625691
+      ]
+    },
+    {
+      "locked_parameter_index": 0,
+      "locked_parameter_name": "Ka",
+      "locked_parameter_value": 0.615848211066026,
+      "free_parameter_indices": [
+        1,
+        2
+      ],
+      "best_cost": 40.498517325767466,
+      "best_full_parameter_vector": [
+        615848211.0660261,
+        1000000000.0,
+        0.0,
+        0.016975392410572974,
+        0.00832,
+        11948.246118796593,
+        1000000000.0,
+        0.600000500867288,
+        0.997471182625691
+      ]
+    },
+    {
+      "locked_parameter_index": 0,
+      "locked_parameter_name": "Ka",
+      "locked_parameter_value": 1.0,
+      "free_parameter_indices": [
+        1,
+        2
+      ],
+      "best_cost": 40.498743773085195,
+      "best_full_parameter_vector": [
+        1000000000.0,
+        1000000000.0,
+        0.0,
+        0.016954416009230682,
+        0.00832,
+        11948.813189133713,
+        1000000000.0,
+        0.600000500867288,
+        0.997471182625691
+      ]
+    },
+    {
+      "locked_parameter_index": 1,
+      "locked_parameter_name": "V1_ref",
+      "locked_parameter_value": 0.019734066985765283,
+      "free_parameter_indices": [
+        0,
+        2
+      ],
+      "best_cost": 43.38826198416993,
+      "best_full_parameter_vector": [
+        20000000.0,
+        1000000000.0,
+        0.0,
+        0.019734066985765283,
+        0.00832,
+        12003.499433594567,
+        1000000000.0,
+        0.600000500867288,
+        0.997471182625691
+      ]
+    },
+    {
+      "locked_parameter_index": 0,
+      "locked_parameter_name": "Ka",
+      "locked_parameter_value": 0.0018329807108324356,
+      "free_parameter_indices": [
+        1,
+        2
+      ],
+      "best_cost": 43.93349230711116,
+      "best_full_parameter_vector": [
+        1832980.7108324356,
+        1000000000.0,
+        0.0,
+        0.004768668453275278,
+        0.00832,
+        11959.450503166589,
+        1000000000.0,
+        0.600000500867288,
+        0.997471182625691
+      ]
+    },
+    {
+      "locked_parameter_index": 2,
+      "locked_parameter_name": "CL_ref",
+      "locked_parameter_value": 2.0691380811147904e-05,
+      "free_parameter_indices": [
+        0,
+        1
+      ],
+      "best_cost": 50.40617456527037,
+      "best_full_parameter_vector": [
+        14290599.635544602,
+        1000000000.0,
+        0.0,
+        0.011113536876311081,
+        0.00832,
+        20691.380811147905,
+        1000000000.0,
+        0.600000500867288,
+        0.997471182625691
+      ]
+    },
+    {
+      "locked_parameter_index": 1,
+      "locked_parameter_name": "V1_ref",
+      "locked_parameter_value": 0.004609328393111455,
+      "free_parameter_indices": [
+        0,
+        2
+      ],
+      "best_cost": 56.74899245370962,
+      "best_full_parameter_vector": [
+        5000000.000000002,
+        1000000000.0,
+        0.0,
+        0.004609328393111455,
+        0.00832,
+        13420.244001639907,
+        1000000000.0,
+        0.600000500867288,
+        0.997471182625691
+      ]
+    },
+    {
+      "locked_parameter_index": 2,
+      "locked_parameter_name": "CL_ref",
+      "locked_parameter_value": 7.847599703514612e-06,
+      "free_parameter_indices": [
+        0,
+        1
+      ],
+      "best_cost": 66.53160418717052,
+      "best_full_parameter_vector": [
+        20000000.0,
+        1000000000.0,
+        0.0,
+        0.017234248999290547,
+        0.00832,
+        7847.599703514612,
+        1000000000.0,
+        0.600000500867288,
+        0.997471182625691
+      ]
+    },
+    {
+      "locked_parameter_index": 1,
+      "locked_parameter_name": "V1_ref",
+      "locked_parameter_value": 0.03204371894107774,
+      "free_parameter_indices": [
+        0,
+        2
+      ],
+      "best_cost": 70.48765637304629,
+      "best_full_parameter_vector": [
+        20000000.0,
+        1000000000.0,
+        0.0,
+        0.03204371894107774,
+        0.00832,
+        10195.324133857128,
+        1000000000.0,
+        0.600000500867288,
+        0.997471182625691
+      ]
+    },
+    {
+      "locked_parameter_index": 0,
+      "locked_parameter_name": "Ka",
+      "locked_parameter_value": 0.001128837891684689,
+      "free_parameter_indices": [
+        1,
+        2
+      ],
+      "best_cost": 77.84175982203182,
+      "best_full_parameter_vector": [
+        1128837.8916846889,
+        1000000000.0,
+        0.0,
+        0.004768668453275278,
+        0.00832,
+        12750.769806036895,
+        1000000000.0,
+        0.600000500867288,
+        0.997471182625691
+      ]
+    },
+    {
+      "locked_parameter_index": 2,
+      "locked_parameter_name": "CL_ref",
+      "locked_parameter_value": 3.359818286283781e-05,
+      "free_parameter_indices": [
+        0,
+        1
+      ],
+      "best_cost": 81.79286803791267,
+      "best_full_parameter_vector": [
+        6555406.895483988,
+        1000000000.0,
+        0.0,
+        0.005121120764544683,
+        0.00832,
+        33598.18286283781,
+        1000000000.0,
+        0.600000500867288,
+        0.997471182625691
+      ]
+    },
+    {
+      "locked_parameter_index": 1,
+      "locked_parameter_name": "V1_ref",
+      "locked_parameter_value": 0.0028386466451135314,
+      "free_parameter_indices": [
+        0,
+        2
+      ],
+      "best_cost": 90.08593569985194,
+      "best_full_parameter_vector": [
+        5000000.000000002,
+        1000000000.0,
+        0.0,
+        0.0028386466451135314,
+        0.00832,
+        20000.0,
+        1000000000.0,
+        0.600000500867288,
+        0.997471182625691
+      ]
+    },
+    {
+      "locked_parameter_index": 1,
+      "locked_parameter_name": "V1_ref",
+      "locked_parameter_value": 0.05203184545362308,
+      "free_parameter_indices": [
+        0,
+        2
+      ],
+      "best_cost": 95.79179204112232,
+      "best_full_parameter_vector": [
+        20000000.0,
+        1000000000.0,
+        0.0,
+        0.05203184545362308,
+        0.00832,
+        9185.572408827398,
+        1000000000.0,
+        0.600000500867288,
+        0.997471182625691
+      ]
+    },
+    {
+      "locked_parameter_index": 0,
+      "locked_parameter_name": "Ka",
+      "locked_parameter_value": 0.0006951927961775606,
+      "free_parameter_indices": [
+        1,
+        2
+      ],
+      "best_cost": 103.92138474138235,
+      "best_full_parameter_vector": [
+        695192.7961775606,
+        1000000000.0,
+        0.0,
+        0.004768668453275278,
+        0.00832,
+        12266.624292709634,
+        1000000000.0,
+        0.600000500867288,
+        0.997471182625691
+      ]
+    },
+    {
+      "locked_parameter_index": 0,
+      "locked_parameter_name": "Ka",
+      "locked_parameter_value": 0.0004281332398719394,
+      "free_parameter_indices": [
+        1,
+        2
+      ],
+      "best_cost": 116.01351434440527,
+      "best_full_parameter_vector": [
+        428133.2398719394,
+        1000000000.0,
+        0.0,
+        0.004768668453275278,
+        0.00832,
+        10604.311113542515,
+        1000000000.0,
+        0.600000500867288,
+        0.997471182625691
+      ]
+    },
+    {
+      "locked_parameter_index": 1,
+      "locked_parameter_name": "V1_ref",
+      "locked_parameter_value": 0.08448810034465563,
+      "free_parameter_indices": [
+        0,
+        2
+      ],
+      "best_cost": 119.99722200491895,
+      "best_full_parameter_vector": [
+        20000000.0,
+        1000000000.0,
+        0.0,
+        0.08448810034465563,
+        0.00832,
+        8526.551798666931,
+        1000000000.0,
+        0.600000500867288,
+        0.997471182625691
+      ]
+    },
+    {
+      "locked_parameter_index": 2,
+      "locked_parameter_name": "CL_ref",
+      "locked_parameter_value": 5.455594781168515e-05,
+      "free_parameter_indices": [
+        0,
+        1
+      ],
+      "best_cost": 120.27354895864121,
+      "best_full_parameter_vector": [
+        8379277.214001931,
+        1000000000.0,
+        0.0,
+        0.006517311659772689,
+        0.00832,
+        54555.94781168515,
+        1000000000.0,
+        0.600000500867288,
+        0.997471182625691
+      ]
+    },
+    {
+      "locked_parameter_index": 0,
+      "locked_parameter_name": "Ka",
+      "locked_parameter_value": 0.00026366508987303583,
+      "free_parameter_indices": [
+        1,
+        2
+      ],
+      "best_cost": 121.26572198115221,
+      "best_full_parameter_vector": [
+        263665.08987303585,
+        1000000000.0,
+        0.0,
+        0.004768668453275278,
+        0.00832,
+        8973.590420313058,
+        1000000000.0,
+        0.600000500867288,
+        0.997471182625691
+      ]
+    },
+    {
+      "locked_parameter_index": 0,
+      "locked_parameter_name": "Ka",
+      "locked_parameter_value": 0.00016237767391887218,
+      "free_parameter_indices": [
+        1,
+        2
+      ],
+      "best_cost": 129.56309313560217,
+      "best_full_parameter_vector": [
+        162377.6739188722,
+        1000000000.0,
+        0.0,
+        0.004768668453275278,
+        0.00832,
+        8094.576669547211,
+        1000000000.0,
+        0.600000500867288,
+        0.997471182625691
+      ]
+    },
+    {
+      "locked_parameter_index": 1,
+      "locked_parameter_name": "V1_ref",
+      "locked_parameter_value": 0.13718981207789452,
+      "free_parameter_indices": [
+        0,
+        2
+      ],
+      "best_cost": 140.3920902879122,
+      "best_full_parameter_vector": [
+        20000000.0,
+        1000000000.0,
+        0.0,
+        0.13718981207789452,
+        0.00832,
+        7082.433317842381,
+        1000000000.0,
+        0.600000500867288,
+        0.997471182625691
+      ]
+    },
+    {
+      "locked_parameter_index": 0,
+      "locked_parameter_name": "Ka",
+      "locked_parameter_value": 0.0001,
+      "free_parameter_indices": [
+        1,
+        2
+      ],
+      "best_cost": 141.67745609089658,
+      "best_full_parameter_vector": [
+        100000.0,
+        1000000000.0,
+        0.0,
+        0.004768668453275278,
+        0.00832,
+        7581.329375224661,
+        1000000000.0,
+        0.600000500867288,
+        0.997471182625691
+      ]
+    },
+    {
+      "locked_parameter_index": 1,
+      "locked_parameter_name": "V1_ref",
+      "locked_parameter_value": 0.001748175458241746,
+      "free_parameter_indices": [
+        0,
+        2
+      ],
+      "best_cost": 149.20051491232937,
+      "best_full_parameter_vector": [
+        5000000.000000002,
+        1000000000.0,
+        0.0,
+        0.001748175458241746,
+        0.00832,
+        20000.0,
+        1000000000.0,
+        0.600000500867288,
+        0.997471182625691
+      ]
+    },
+    {
+      "locked_parameter_index": 1,
+      "locked_parameter_name": "V1_ref",
+      "locked_parameter_value": 0.22276562570575695,
+      "free_parameter_indices": [
+        0,
+        2
+      ],
+      "best_cost": 157.00869435886176,
+      "best_full_parameter_vector": [
+        20000000.0,
+        1000000000.0,
+        0.0,
+        0.22276562570575695,
+        0.00832,
+        4999.999999999999,
+        1000000000.0,
+        0.600000500867288,
+        0.997471182625691
+      ]
+    },
+    {
+      "locked_parameter_index": 2,
+      "locked_parameter_name": "CL_ref",
+      "locked_parameter_value": 8.858667904100825e-05,
+      "free_parameter_indices": [
+        0,
+        1
+      ],
+      "best_cost": 167.1996461679042,
+      "best_full_parameter_vector": [
+        9806484.881184204,
+        1000000000.0,
+        0.0,
+        0.00902740794211835,
+        0.00832,
+        88586.67904100825,
+        1000000000.0,
+        0.600000500867288,
+        0.997471182625691
+      ]
+    },
+    {
+      "locked_parameter_index": 1,
+      "locked_parameter_name": "V1_ref",
+      "locked_parameter_value": 0.36172164131182916,
+      "free_parameter_indices": [
+        0,
+        2
+      ],
+      "best_cost": 183.0664502597661,
+      "best_full_parameter_vector": [
+        20000000.0,
+        1000000000.0,
+        0.0,
+        0.36172164131182916,
+        0.00832,
+        4999.999999999999,
+        1000000000.0,
+        0.600000500867288,
+        0.997471182625691
+      ]
+    },
+    {
+      "locked_parameter_index": 2,
+      "locked_parameter_name": "CL_ref",
+      "locked_parameter_value": 4.832930238571753e-06,
+      "free_parameter_indices": [
+        0,
+        1
+      ],
+      "best_cost": 202.13343514659954,
+      "best_full_parameter_vector": [
+        20000000.0,
+        1000000000.0,
+        0.0,
+        0.019074673813101115,
+        0.00832,
+        4832.930238571753,
+        1000000000.0,
+        0.600000500867288,
+        0.997471182625691
+      ]
+    },
+    {
+      "locked_parameter_index": 2,
+      "locked_parameter_name": "CL_ref",
+      "locked_parameter_value": 0.0001438449888287663,
+      "free_parameter_indices": [
+        0,
+        1
+      ],
+      "best_cost": 208.70640894917702,
+      "best_full_parameter_vector": [
+        11114039.701440388,
+        1000000000.0,
+        0.0,
+        0.012944284556586447,
+        0.00832,
+        143844.9888287663,
+        1000000000.0,
+        0.600000500867288,
+        0.997471182625691
+      ]
+    },
+    {
+      "locked_parameter_index": 1,
+      "locked_parameter_name": "V1_ref",
+      "locked_parameter_value": 0.5873551872233146,
+      "free_parameter_indices": [
+        0,
+        2
+      ],
+      "best_cost": 213.72702793542516,
+      "best_full_parameter_vector": [
+        20000000.0,
+        1000000000.0,
+        0.0,
+        0.5873551872233146,
+        0.00832,
+        4999.999999999999,
+        1000000000.0,
+        0.600000500867288,
+        0.997471182625691
+      ]
+    },
+    {
+      "locked_parameter_index": 2,
+      "locked_parameter_name": "CL_ref",
+      "locked_parameter_value": 0.00023357214690901214,
+      "free_parameter_indices": [
+        0,
+        1
+      ],
+      "best_cost": 240.23102915524893,
+      "best_full_parameter_vector": [
+        12520704.97338424,
+        1000000000.0,
+        0.0,
+        0.018639019739795124,
+        0.00832,
+        233572.14690901214,
+        1000000000.0,
+        0.600000500867288,
+        0.997471182625691
+      ]
+    },
+    {
+      "locked_parameter_index": 1,
+      "locked_parameter_name": "V1_ref",
+      "locked_parameter_value": 0.9537336906550555,
+      "free_parameter_indices": [
+        0,
+        2
+      ],
+      "best_cost": 241.0916306959281,
+      "best_full_parameter_vector": [
+        20000000.0,
+        1000000000.0,
+        0.0,
+        0.9537336906550555,
+        0.00832,
+        4999.999999999999,
+        1000000000.0,
+        0.600000500867288,
+        0.997471182625691
+      ]
+    },
+    {
+      "locked_parameter_index": 1,
+      "locked_parameter_name": "V1_ref",
+      "locked_parameter_value": 0.0010766107285877101,
+      "free_parameter_indices": [
+        0,
+        2
+      ],
+      "best_cost": 250.92335837559924,
+      "best_full_parameter_vector": [
+        5000000.000000002,
+        1000000000.0,
+        0.0,
+        0.0010766107285877101,
+        0.00832,
+        20000.0,
+        1000000000.0,
+        0.600000500867288,
+        0.997471182625691
+      ]
+    },
+    {
+      "locked_parameter_index": 2,
+      "locked_parameter_name": "CL_ref",
+      "locked_parameter_value": 0.0003792690190732246,
+      "free_parameter_indices": [
+        0,
+        1
+      ],
+      "best_cost": 262.41477354744904,
+      "best_full_parameter_vector": [
+        11946144.719109586,
+        1000000000.0,
+        0.0,
+        0.019074673813101115,
+        0.00832,
+        379269.0190732246,
+        1000000000.0,
+        0.600000500867288,
+        0.997471182625691
+      ]
+    },
+    {
+      "locked_parameter_index": 2,
+      "locked_parameter_name": "CL_ref",
+      "locked_parameter_value": 0.0006158482110660261,
+      "free_parameter_indices": [
+        0,
+        1
+      ],
+      "best_cost": 276.6310518953339,
+      "best_full_parameter_vector": [
+        13949797.017767718,
+        1000000000.0,
+        0.0,
+        0.013823136037315338,
+        0.00832,
+        615848.2110660261,
+        1000000000.0,
+        0.600000500867288,
+        0.997471182625691
+      ]
+    },
+    {
+      "locked_parameter_index": 2,
+      "locked_parameter_name": "CL_ref",
+      "locked_parameter_value": 0.001,
+      "free_parameter_indices": [
+        0,
+        1
+      ],
+      "best_cost": 285.91488373877957,
+      "best_full_parameter_vector": [
+        20000000.0,
+        1000000000.0,
+        0.0,
+        0.019074673813101115,
+        0.00832,
+        1000000.0,
+        1000000000.0,
+        0.600000500867288,
+        0.997471182625691
+      ]
+    },
+    {
+      "locked_parameter_index": 1,
+      "locked_parameter_name": "V1_ref",
+      "locked_parameter_value": 0.0006630287912152326,
+      "free_parameter_indices": [
+        0,
+        2
+      ],
+      "best_cost": 405.4626667286569,
+      "best_full_parameter_vector": [
+        5000000.000000002,
+        1000000000.0,
+        0.0,
+        0.0006630287912152326,
+        0.00832,
+        20000.0,
+        1000000000.0,
+        0.600000500867288,
+        0.997471182625691
+      ]
+    },
+    {
+      "locked_parameter_index": 1,
+      "locked_parameter_name": "V1_ref",
+      "locked_parameter_value": 0.0004083250949551709,
+      "free_parameter_indices": [
+        0,
+        2
+      ],
+      "best_cost": 568.9374260721349,
+      "best_full_parameter_vector": [
+        5000000.000000002,
+        1000000000.0,
+        0.0,
+        0.0004083250949551709,
+        0.00832,
+        20000.0,
+        1000000000.0,
+        0.600000500867288,
+        0.997471182625691
+      ]
+    },
+    {
+      "locked_parameter_index": 2,
+      "locked_parameter_name": "CL_ref",
+      "locked_parameter_value": 2.9763514416313177e-06,
+      "free_parameter_indices": [
+        0,
+        1
+      ],
+      "best_cost": 599.0575443164087,
+      "best_full_parameter_vector": [
+        5000000.000000002,
+        1000000000.0,
+        0.0,
+        0.019074673813101115,
+        0.00832,
+        2976.351441631318,
+        1000000000.0,
+        0.600000500867288,
+        0.997471182625691
+      ]
+    },
+    {
+      "locked_parameter_index": 1,
+      "locked_parameter_name": "V1_ref",
+      "locked_parameter_value": 0.00025146627926150736,
+      "free_parameter_indices": [
+        0,
+        2
+      ],
+      "best_cost": 667.1083399858662,
+      "best_full_parameter_vector": [
+        5000000.000000002,
+        1000000000.0,
+        0.0,
+        0.00025146627926150736,
+        0.00832,
+        20000.0,
+        1000000000.0,
+        0.600000500867288,
+        0.997471182625691
+      ]
+    },
+    {
+      "locked_parameter_index": 1,
+      "locked_parameter_name": "V1_ref",
+      "locked_parameter_value": 9.537336906550556e-05,
+      "free_parameter_indices": [
+        0,
+        2
+      ],
+      "best_cost": 669.4681299584414,
+      "best_full_parameter_vector": [
+        5000000.000000002,
+        1000000000.0,
+        0.0,
+        9.537336906550556e-05,
+        0.00832,
+        20000.0,
+        1000000000.0,
+        0.600000500867288,
+        0.997471182625691
+      ]
+    },
+    {
+      "locked_parameter_index": 1,
+      "locked_parameter_name": "V1_ref",
+      "locked_parameter_value": 0.00015486505822662913,
+      "free_parameter_indices": [
+        0,
+        2
+      ],
+      "best_cost": 684.3285086890015,
+      "best_full_parameter_vector": [
+        5000000.000000002,
+        1000000000.0,
+        0.0,
+        0.00015486505822662913,
+        0.00832,
+        20000.0,
+        1000000000.0,
+        0.600000500867288,
+        0.997471182625691
+      ]
+    },
+    {
+      "locked_parameter_index": 2,
+      "locked_parameter_name": "CL_ref",
+      "locked_parameter_value": 1.8329807108324358e-06,
+      "free_parameter_indices": [
+        0,
+        1
+      ],
+      "best_cost": 1646.696477832854,
+      "best_full_parameter_vector": [
+        5000000.000000002,
+        1000000000.0,
+        0.0,
+        0.019074673813101115,
+        0.00832,
+        1832.9807108324358,
+        1000000000.0,
+        0.600000500867288,
+        0.997471182625691
+      ]
+    },
+    {
+      "locked_parameter_index": 2,
+      "locked_parameter_name": "CL_ref",
+      "locked_parameter_value": 1.128837891684689e-06,
+      "free_parameter_indices": [
+        0,
+        1
+      ],
+      "best_cost": 3777.6144068147323,
+      "best_full_parameter_vector": [
+        5000000.000000002,
+        1000000000.0,
+        0.0,
+        0.019074673813101115,
+        0.00832,
+        1128.8378916846889,
+        1000000000.0,
+        0.600000500867288,
+        0.997471182625691
+      ]
+    },
+    {
+      "locked_parameter_index": 2,
+      "locked_parameter_name": "CL_ref",
+      "locked_parameter_value": 6.951927961775606e-07,
+      "free_parameter_indices": [
+        0,
+        1
+      ],
+      "best_cost": 6935.9962241925405,
+      "best_full_parameter_vector": [
+        5000000.000000002,
+        1000000000.0,
+        0.0,
+        0.019074673813101115,
+        0.00832,
+        695.1927961775606,
+        1000000000.0,
+        0.600000500867288,
+        0.997471182625691
+      ]
+    },
+    {
+      "locked_parameter_index": 2,
+      "locked_parameter_name": "CL_ref",
+      "locked_parameter_value": 4.2813323987193943e-07,
+      "free_parameter_indices": [
+        0,
+        1
+      ],
+      "best_cost": 10492.155045502439,
+      "best_full_parameter_vector": [
+        5000000.000000002,
+        1000000000.0,
+        0.0,
+        0.019074673813101115,
+        0.00832,
+        428.13323987193945,
+        1000000000.0,
+        0.600000500867288,
+        0.997471182625691
+      ]
+    },
+    {
+      "locked_parameter_index": 2,
+      "locked_parameter_name": "CL_ref",
+      "locked_parameter_value": 2.6366508987303586e-07,
+      "free_parameter_indices": [
+        0,
+        1
+      ],
+      "best_cost": 13750.005289644321,
+      "best_full_parameter_vector": [
+        5000000.000000002,
+        1000000000.0,
+        0.0,
+        0.019074673813101115,
+        0.00832,
+        263.66508987303587,
+        1000000000.0,
+        0.600000500867288,
+        0.997471182625691
+      ]
+    },
+    {
+      "locked_parameter_index": 2,
+      "locked_parameter_name": "CL_ref",
+      "locked_parameter_value": 1.623776739188722e-07,
+      "free_parameter_indices": [
+        0,
+        1
+      ],
+      "best_cost": 16338.274124488971,
+      "best_full_parameter_vector": [
+        5000000.000000002,
+        1000000000.0,
+        0.0,
+        0.019074673813101115,
+        0.00832,
+        162.3776739188722,
+        1000000000.0,
+        0.600000500867288,
+        0.997471182625691
+      ]
+    },
+    {
+      "locked_parameter_index": 2,
+      "locked_parameter_name": "CL_ref",
+      "locked_parameter_value": 1.0000000000000001e-07,
+      "free_parameter_indices": [
+        0,
+        1
+      ],
+      "best_cost": 18210.230642854283,
+      "best_full_parameter_vector": [
+        5000000.000000002,
+        1000000000.0,
+        0.0,
+        0.019074673813101115,
+        0.00832,
+        100.00000000000001,
+        1000000000.0,
+        0.600000500867288,
+        0.997471182625691
+      ]
+    }
+  ]
+}

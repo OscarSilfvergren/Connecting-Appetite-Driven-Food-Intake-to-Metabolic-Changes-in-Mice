@@ -1,0 +1,63 @@
+########## NAME
+Model_PK
+
+########## METADATA
+time_unit = d
+authors = "Silfvergren"
+
+########## MACROS
+
+########## STATES
+
+d/dt(A)       =     (SCInfusion                                          -k01                        )*1440
+d/dt(C1)      =     (IVTransfusion/V1   +k21*C2*V2/V1  -k12*C1           +k01/V1   - k10             )*1440
+d/dt(C2)      =     (                   -k21*C2        +k12*C1*V1/V2                                 )*1440
+
+A(0) = 0
+C1(0) = 0
+C2(0) = 0
+########## PARAMETERS
+Ka      = 0.3699486048130732
+Ka50    = 48.83758652460112
+Q_ref   = 0.001257834447331407
+V1_ref  = 0.05853931222632042
+V2_ref  = 0.05825742570672465
+CL_ref  = 2.2367497982531073
+CL50    = 309.8207470004754
+b_reaction   = 0.600000500867288
+b_volume     = 0.997471182625691
+
+########## VARIABLES
+V1   = V1_ref  * (BW_kg/BW_ref)^b_volume
+V2   = V2_ref  * (BW_kg/BW_ref)^b_volume
+CL   = CL_ref  * (BW_kg/BW_ref)^b_reaction
+Q    = Q_ref   * (BW_kg/BW_ref)^b_reaction 
+
+E1      = C1*V1
+E2      = C2*V2
+
+k12     = Q/V1
+k21     = Q/V2
+
+k10     = (CL*C1/(CL50+C1))/V1
+k01     = (Ka*A)/(Ka50+A)
+
+########## FUNCTIONS
+
+########## EVENTS
+
+########## OUTPUTS
+C1 = C1
+
+########## INPUTS
+BW_kg            = BW_kg @0.34
+BW_ref           = BW_ref @0.34
+IVTransfusion    = IVTransfusion @0
+SCInfusion       = SCInfusion @0
+
+########## FEATURES
+Plasma_Exenatide  = C1 [nM]
+Plasma_Semaglutide  = C1 [nM]
+
+BW_kg  = BW_kg
+BW_ref = BW_ref
